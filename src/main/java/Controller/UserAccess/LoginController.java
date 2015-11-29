@@ -20,9 +20,9 @@ public class LoginController extends HttpServlet {
         setContentType(response);
 
         if (isUserLogged(request)) {
-            response.sendRedirect("/login-web-app/userhome.jsp");
+            response.sendRedirect("userhome.jsp");
         } else {
-            response.sendRedirect("/login-web-app/login.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 

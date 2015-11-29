@@ -1,3 +1,4 @@
+<%@ include file="pages/loginredirect.jsp" %>
 <%@ page import="Domain.Model.User.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
