@@ -2,9 +2,13 @@
 A web login application using java servlets.
 
 #Technical stuff
+* JDK 1.8.0_66
 * Tomcat 8.0.28
-* JVM 1.8
+* Apache Maven 3.3.3
 * jUnit 4.12
+
+#Requeriments
+You need to have installed java 8, tomcat 8 and maven 3
 
 # Run
 Once you have the source code, an assuming that have the environment variable called CATALINA_HOME pointing to the tomcat installation path, you only need to execute:
@@ -17,5 +21,5 @@ For running the test you need to launch:
 `mvn test`
 
 #View application
-Assuming that tomcat is listening in 8080 port, launch this url on your browser `http://localhost:8080`
+Assuming that tomcat is listening in 8080 port, launch this url on your browser `http://localhost:8080
 
