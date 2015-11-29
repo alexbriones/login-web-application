@@ -36,10 +36,10 @@ public class LoginController extends HttpServlet {
         if (authenticator.authenticate(request.getParameter("username"), request.getParameter("password"))) {
             request.getSession().setAttribute("user", getUserLogged(userRepository, request.getParameter("username")));
             request.getSession().setMaxInactiveInterval(MAX_TIME_INACTIVE);
-            response.sendRedirect("/login-web-app/userhome.jsp");
+            response.sendRedirect("userhome.jsp");
         } else {
             request.getSession().setAttribute("error","Not valid user/password");
-            response.sendRedirect("/login-web-app/login.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 
