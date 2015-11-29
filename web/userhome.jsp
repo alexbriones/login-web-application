@@ -1,4 +1,4 @@
-<% if (session.getAttribute("user") == null) {response.sendRedirect("login"); return;}%>
+<% if (session.getAttribute("user") == null) {response.sendRedirect("login.jsp"); return;}%>
 <%@ page import="Domain.Model.User.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
