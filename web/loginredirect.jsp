@@ -1,1 +1,1 @@
-<% if (session.getAttribute("user") == null) {response.sendRedirect("/login.jsp"); return;}%>
+<% if (session.getAttribute("user") == null) {response.sendRedirect("../login.jsp"); return;}%>

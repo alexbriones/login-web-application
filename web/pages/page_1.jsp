@@ -5,6 +5,6 @@
     <head></head>
     <body>
         <h1>Hello <%= ((User)session.getAttribute("user")).getUserName() %>, you are in page 1</h1>
-        <p><a href="/logout">logout</a></p>
+        <p><a href="../logout">logout</a></p>
     </body>
 </html>
