@@ -36,11 +36,11 @@
                 <configuration>
                     <container>
                         <containerId>tomcat8x</containerId>
-                        <home>/usr/local/Cellar/tomcat/8.0.28/libexec</home>
+                        <home>${env.CATALINA_HOME}</home>
                     </container>
                     <configuration>
                         <type>existing</type>
-                        <home>/usr/local/Cellar/tomcat/8.0.28/libexec</home>
+                        <home>${env.CATALINA_HOME}</home>
                     </configuration>
                     <deployables>
                         <deployable>
