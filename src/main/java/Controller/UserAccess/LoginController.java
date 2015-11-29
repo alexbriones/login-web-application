@@ -20,9 +20,9 @@ public class LoginController extends HttpServlet {
         setContentType(response);
 
         if (isUserLogged(request)) {
-            response.sendRedirect("userhome.jsp");
+            response.sendRedirect(request.getContextPath() + "/userhome.jsp");
         } else {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
     }
 
@@ -36,10 +36,10 @@ public class LoginController extends HttpServlet {
         if (authenticator.authenticate(request.getParameter("username"), request.getParameter("password"))) {
             request.getSession().setAttribute("user", getUserLogged(userRepository, request.getParameter("username")));
             request.getSession().setMaxInactiveInterval(MAX_TIME_INACTIVE);
-            response.sendRedirect("userhome.jsp");
+            response.sendRedirect(request.getContextPath() + "/userhome.jsp");
         } else {
             request.getSession().setAttribute("error","Not valid user/password");
-            response.sendRedirect("login.jsp");
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
     }
 
