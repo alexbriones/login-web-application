@@ -17,12 +17,13 @@ public class PrivatePagesController extends HttpServlet {
         if (request.getSession() != null) {
             User user = (User) request.getSession().getAttribute("user");
             if (user != null) {
+
                 String pageName = getNamePage(request.getRequestURI());
                 RoleBasedBlocker roleBasedBlocker = new RoleBasedBlocker(user);
                 if (!roleBasedBlocker.hasPrivilegesToAccessPage(pageName)) {
                     response.sendError(HttpServletResponse.SC_FORBIDDEN);
                 } else {
-                    RequestDispatcher dispatcher = request.getRequestDispatcher(request.getRequestURI()+".jsp");
+                    RequestDispatcher dispatcher = request.getRequestDispatcher(request.getServletPath()+".jsp");
                     dispatcher.forward(request, response);
                 }
 
@@ -37,4 +38,6 @@ public class PrivatePagesController extends HttpServlet {
     private String getNamePage(String uri) {
         return uri.substring(uri.lastIndexOf("/")+1);
     }
+
+
 }

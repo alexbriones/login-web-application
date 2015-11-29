@@ -45,7 +45,7 @@
                     <deployables>
                         <deployable>
                             <groupId>groupId</groupId>
-                            <artifactId></artifactId>
+                            <artifactId>login-web-app</artifactId>
                             <type>war</type>
                         </deployable>
                     </deployables>
