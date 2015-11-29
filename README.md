@@ -1,7 +1,8 @@
 #Login web application
 A web login application using java servlets.
 
-#Technical stuff
+#Software
+The application was developed using:
 * JDK 1.8.0_66
 * Tomcat 8.0.28
 * Apache Maven 3.3.3
