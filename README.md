@@ -10,7 +10,7 @@ A web login application using java servlets.
 #Requeriments
 You need to have installed java 8, tomcat 8 and maven 3
 
-# Run
+# Deploy application
 Once you have the source code, an assuming that have the environment variable called CATALINA_HOME pointing to the tomcat installation path, you only need to execute:
 `mvn package cargo:deploy`
 
