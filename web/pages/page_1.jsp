@@ -1,6 +1,6 @@
 <%@ page import="Domain.Model.User.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="/loginredirect.jsp" %>
+<%@ include file="loginredirect.jsp" %>
 <html>
     <head></head>
     <body>

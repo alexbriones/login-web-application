@@ -31,7 +31,7 @@ public class PrivatePagesController extends HttpServlet {
                 response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } else {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("/login-web-app/login.jsp");
         }
     }
 
