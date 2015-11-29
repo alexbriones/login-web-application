@@ -38,6 +38,4 @@ public class PrivatePagesController extends HttpServlet {
     private String getNamePage(String uri) {
         return uri.substring(uri.lastIndexOf("/")+1);
     }
-
-
 }
