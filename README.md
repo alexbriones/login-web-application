@@ -24,5 +24,5 @@ For running the test you need to launch:
 `mvn test`
 
 #View application
-Assuming that tomcat is listening in 8080 port, launch this url on your browser `http://localhost:8080`
+Assuming that tomcat is listening in 8080 port, launch this url on your browser `http://localhost:8080/login-web-app/`
 
