@@ -17,5 +17,5 @@ For running the test you need to launch:
 `mvn test`
 
 #View application
-In your browser launch url (assuming that tomcat is listening in 8080 port)
-http://localhost:8080
+Assuming that tomcat is listening in 8080 port, launch this url on your browser `http://localhost:8080`
+
