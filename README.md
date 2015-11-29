@@ -7,8 +7,8 @@ A web login application using java servlets.
 * jUnit 4.12
 
 # Run
-Once you have the source code, an assuming that have the environment variable called CATALINA_HOME that points to the tomcat installation path, you only need to execute:
-mvn package cargo:deploy
+Once you have the source code, an assuming that have the environment variable called CATALINA_HOME pointing to the tomcat installation path, you only need to execute:
+`mvn package cargo:deploy`
 
 This command creates the war file and deploy to the tomcat server (tomcat must be configured as autodeploy)
 
