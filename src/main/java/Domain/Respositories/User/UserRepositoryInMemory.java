@@ -16,6 +16,29 @@ public class UserRepositoryInMemory implements UserRepository {
     private final HashMap<String, User> users = new HashMap<>();
 
     public UserRepositoryInMemory() {
+        constructRepository();
+    }
+
+    @Override
+    public User findUserByUserName(String userName) throws UserNotExistsException {
+        User user = users.get(userName);
+
+        if (user == null) {
+            throw new UserNotExistsException();
+        }
+
+        return user;
+    }
+
+    @Override
+    public void saveUser(User user) throws UserAlreadyExistsException {
+        if (this.users.get(user.getUserName()) != null) {
+            throw new UserAlreadyExistsException();
+        }
+        this.users.put(user.getUserName(), user);
+    }
+
+    private void constructRepository() {
         try {
             saveUser(
                     new User(
@@ -53,25 +76,5 @@ public class UserRepositoryInMemory implements UserRepository {
         } catch (Exception ignored) {
 
         }
-
-    }
-
-    @Override
-    public User findUserByUserName(String userName) throws UserNotExistsException {
-        User user = users.get(userName);
-
-        if (user == null) {
-            throw new UserNotExistsException();
-        }
-
-        return user;
-    }
-
-    @Override
-    public void saveUser(User user) throws UserAlreadyExistsException {
-        if (this.users.get(user.getUserName()) != null) {
-            throw new UserAlreadyExistsException();
-        }
-        this.users.put(user.getUserName(), user);
     }
 }

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head></head>
+    <h1>Login</h1>
     <body>
         <% if (session.getAttribute("error")!=null) { out.print(session.getAttribute("error")); } %>
         <form method="post" action="login">
